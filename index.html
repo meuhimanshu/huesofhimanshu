@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portflio Himanshu</title>
+</head> 
+<body class="bg-bgColour">
+    <!--NAVBAR-->
+    <nav class="p-3 flex bg-bgColour justify-between items-center">
+        <a href="#" id="navBar" class="flex gap-2 items-center">
+            <span class=" p-4 text-lg font-sfpro bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent font-semibold">
+                Himanshu Singh
+            </span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-16 ">
+            <a href="#" class="bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-110 duration-300 ">About me</a>
+            <a href="#" class="bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-110 duration-300">Projects</a>
+            <a href="#" class="bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-110 duration-300">Skills</a>
+            <a href="#" class="bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-110 duration-300">Contact</a>
+            <a href="#" class="bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-110 duration-300">Login</a>
+
+        </div>
+        <button class="hidden lg:flex gap-2 p-4 bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent  items-center border-2 border-white px-6 py-2.5 rounded-lg hover:border-primaryColour transition duration-900 hover:delay-600 hover:scale-95 duration-300">
+            <i class="fa-regular fa-file"></i>
+            <span>Download Resume</span>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 lg:hidden bg-bgColour inset-0">
+            <div id="nav-bar" class="p-3 flex bg-bgColour justify-between items-center">
+                <span class=" p-2 text-lg font-sfpro bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent font-semibold">
+                    Himanshu Singh
+                </span>
+                <button class="p-2 lg:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent"></i>
+                </button>
+            </div>
+            <div class="">
+                <a href="#" class=" p-3 m-3 block bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-105 duration-300">About me</a>
+                <a href="#" class=" p-3 m-3 block bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-105 duration-300">Projects</a>
+                <a href="#" class=" p-3 m-3 block bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-105 duration-300">Skills</a>
+                <a href="#" class=" p-3 m-3 block bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-105 duration-300">Contact</a>
+                <a href="#" class=" p-3 m-3 block bg-white font-sfpro hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent transition duration-900 hover:delay-600 hover:scale-105 duration-300">Login</a>
+                <div class="h-[1px] bg-primaryColour opacity-60"></div>
+                <button class="flex m-4 gap-2 p-3  font-sfpro bg-white hover:bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent  items-center border-2 border-white px-6 py-2.5 rounded-lg hover:border-primaryColour transition duration-900 hover:delay-600">
+                    <i class="fa-regular fa-file"></i>
+                    <span>Download Resume</span>
+                </button>
+            </div>
+
+
+        </div>
+
+    </nav>
+    <!--MAIN SECTION-->
+    <main id="main">
+        <!--HERO SECTION-->
+        <div id="hero" class="min-h-screen bg-gradient-to-b from-bgColour via-black to-transparent font-sfpro ">
+            <div class="text-3xl px-8 mx-auto pt-8 lg:text-8xl md:pt-32 lg:pt-40 felx flex-col sm:items-center sm:text-center">
+                <span class="text-white font-sfpro font-semibold">I am </span>
+                <span id ="dynamic-text" class=" bg-gradient-to-br from-purple-400 to-purple-800 bg-clip-text text-transparent  font-sfpro font-semibold typing-effect">Himanshu</span>
+                <span class="sm:pt-4 pt-2 text-xl bg-gradient-to-t from-purple-300 to-purple-400 bg-clip-text text-transparent  font-sfpro md:text-sm lg:text-3xl hover:text-white transition duration-900 hover:delay-600 duration-300 block">Architecting the future,<br class="sm:hidden"> one byte at a time</span>
+                
+                <div id="fillerforphone" class="sm:hidden flex flex-col">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
+    <dotlottie-player src="https://lottie.host/2dd4d703-be6b-446a-9bf5-d70147867309/dyog2F11Vp.json" background="transparent" speed="1" style="width: 350px; height: 350px;" loop autoplay class= "self-center"></dotlottie-player>
+                </div>
+                <div id="my-buttons" class= "text-xl sm:m-10 pt-5 flex flex-col sm:flex-row sm:justify-center">
+                    <a href="https://www.linkedin.com/in/meuhimanshu/" target="_blank" rel="noopener noreferrer">
+                        <button class="items-center px-8 py-2 font-semibold rounded-xl bg-gradient-to-br from-purple-700 to-purple-800 border-2 border-purple-100 shadow-md shadow-purple-800 hover:opacity-95 hover:-shadow-lg hover:-translate-y-1 duration-300 w-full sm:w-auto">
+                            <i class="fa-brands fa-linkedin text-white "></i>
+                            <span class="text-white">LinkedIn</span>
+                        </button>
+                    </a>
+                    <a href="https://github.com/meuhimanshu" target="_blank" rel="noopener noreferrer">
+                        <button class=" mt-3 items-center sm:mx-5 sm:mt-0 px-8 py-2 font-semibold rounded-xl bg-gradient-to-br from-purple-700 to-purple-800 border-2 border-purple-100 shadow-md shadow-purple-800 hover:opacity-95 hover:-shadow-lg hover:-translate-y-1 duration-300 w-full sm:w-auto ">
+                            <i class="fa-brands fa-github text-white"></i>
+                            <span class="text-white">GitHub</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div id="apps" class="flex flex-col gap-10">
+                <div id="toolkit" class=" flex justify-center gap-2 mt-20 sm:mt-44 font-sfpro font-bold" >
+                    <img src="/assets/asset2.png" alt="" class="translate-y-2">
+                    <span class="text-white text-lg">MY TECH TOOLKIT</span>
+                    <img src="/assets/asset2.png" alt="" class="translate-y-2 -scale-x-100">
+                </div> 
+                <div id="slider" class="font-sfpro text-black flex flex-col gap-4 ">
+                    <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear md:hidden">                       
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/html.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >HTML</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/css.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >CSS</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/js.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >JavaScript</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/jq.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >jQuery</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/python.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Python</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/php.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >PHP</span>
+                        </div>
+                    </div>
+                    <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear md:hidden">
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/pp.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Premiere Pro</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ps.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Photoshop</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ae.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >After Effects</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ai.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Illustrator</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/aws.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >AWS</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/java.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Java</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/cpp.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >C++</span>
+                        </div>
+                    </div>
+                    <div id="line3" class="hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear md:flex">                       
+                        
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/pp.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Premiere Pro</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/python.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Python</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/php.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >PHP</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/aws.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >AWS</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/java.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Java</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/cpp.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >C++</span>
+                        </div>
+
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/html.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >HTML</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/css.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >CSS</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/js.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >JavaScript</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/jq.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >jQuery</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ps.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Photoshop</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ae.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >After Effects</span>
+                        </div>
+                        <div class="flex flex-col min-h-28 min-w-28 items-center justify-center rounded-xl bg-white border border-purple-200 md:min-h-32 md:min-w-32" >
+                            <img src="/logos/ai.png" class="w-12 h-12 ">
+                            <span class=" mt-2 text-[11px] md:text-[17px] font-semibold" >Illustrator</span>
+                        </div>
+
+                    </div>
+                    
+                    
+                </div>
+            </div>
+       
+        </div>
+        <div class="h-[1000px]"></div>
+        <!--PAGE2 SECTION-->
+
+
+    </main>
+
+
+</body>
+<script src="/script.js">
+
+</script>
+</html>
